@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 10em;
+    height: 40px;
+}
+
+header form {
+    margin-top: 30px;
+}
+
+.main {
+    margin-top: 100px;
+}
+
+@media (min-width: 320px) {
+    .logo {
+        height: 50px;
+    }
+}
+
+@media (min-width: 480px) {
+    .logo {
+        height: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        height: 120px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        height: 180px;
+    }
+}

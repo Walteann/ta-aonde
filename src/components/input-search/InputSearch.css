@@ -1,0 +1,22 @@
+
+input {
+    width: 280px;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding-left: 2em;
+}
+
+@media (min-width: 480px) {
+    input {
+        width: 420px;
+    }
+}
+
+@media (min-width: 768px) {
+    input {
+        width: 720px;
+    }
+}
