@@ -1,34 +1,15 @@
 import './TimeLine.css';
 import { CardTracking } from '../card-tracking/CardTracking';
-import { useEffect, useState } from 'react';
-import { TrackingService } from '../../services/TrackingService';
+import { If } from '../if/If';
 
-const MOCK_Tracking = {
-    code: "OQ154682804BR",
-    type: "LS"
-}
-
-export const TimeLine = () => {
-
-    const [tracking, setTracking] = useState([]);
-
-    const getTracking = async (payload) => {
-        const { data } = await TrackingService.getTracking(payload);
-
-        const { evento } = data.objeto[0];
-        setTracking([...evento]);
-
-    }
-
-    useEffect(() => {
-        getTracking(MOCK_Tracking);
-    }, []);
-
+export const TimeLine = (props) => {
 
     return (
         <>  
             <div className="timeline">
-                    {tracking.map((track, index) => <CardTracking key={index} track={track} isOdd={index}/>)}
+                <If condition={props.tracking?.length}>
+                    {props.tracking?.map((track, index) => <CardTracking key={index} track={track} isOdd={index}/>)}
+                </If>
             </div>
         </>
     );

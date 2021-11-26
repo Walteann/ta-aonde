@@ -1,4 +1,20 @@
 
+.input-search {
+    position: relative;
+}
+
+.input-search-icon-search {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+    color: var(--sixth-color);
+}
+
+.input-search-icon-search:hover {
+    color: var(--primary-color);
+} 
+
 input {
     width: 280px;
     height: 40px;

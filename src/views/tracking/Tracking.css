@@ -18,6 +18,14 @@ header form {
     margin-top: 100px;
 }
 
+.numero {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--primary-color);
+    font-size: 35px;
+
+}
+
 @media (min-width: 320px) {
     .logo {
         height: 50px;
