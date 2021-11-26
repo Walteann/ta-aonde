@@ -11,14 +11,11 @@ const MOCK_Tracking = {
 export const TimeLine = () => {
 
     const [tracking, setTracking] = useState([]);
-    const [numberTrack, setNumberTrack] = useState('');
-
 
     const getTracking = async (payload) => {
         const { data } = await TrackingService.getTracking(payload);
 
         const { evento } = data.objeto[0];
-        setNumberTrack(evento.numero);
         setTracking([...evento]);
 
     }
@@ -29,7 +26,7 @@ export const TimeLine = () => {
 
 
     return (
-        <>
+        <>  
             <div className="timeline">
                     {tracking.map((track, index) => <CardTracking key={index} track={track} isOdd={index}/>)}
             </div>
