@@ -1,73 +1,38 @@
 import './TimeLine.css';
+import { CardTracking } from '../card-tracking/CardTracking';
+import { useEffect, useState } from 'react';
+import { TrackingService } from '../../services/TrackingService';
+
+const MOCK_Tracking = {
+    code: "OQ154682804BR",
+    type: "LS"
+}
 
 export const TimeLine = () => {
+
+    const [tracking, setTracking] = useState([]);
+    const [numberTrack, setNumberTrack] = useState('');
+
+
+    const getTracking = async (payload) => {
+        const { data } = await TrackingService.getTracking(payload);
+
+        const { evento } = data.objeto[0];
+        setNumberTrack(evento.numero);
+        setTracking([...evento]);
+
+    }
+
+    useEffect(() => {
+        getTracking(MOCK_Tracking);
+    }, []);
+
+
     return (
-        <div className="timeline">
-            <div className="container left">
-                <div className="content">
-                    <span>24/11/2021 15:33</span>
-                    <h3>Objeto não entregue - carteiro não atendido</h3>
-                    <p>
-                        JABOATAO DOS GUARARAPES - PE
-                    </p>
-                    <p>
-                        Por favor, aguarde. Será informada aqui a unidade em que o objeto ficará disponível para retirada
-                    </p>
-                </div>
+        <>
+            <div className="timeline">
+                    {tracking.map((track, index) => <CardTracking key={index} track={track} isOdd={index}/>)}
             </div>
-            <div className="container right">
-                <div className="content">
-                    <span>24/11/2021 11:20</span>
-                    <h3>Objeto saiu para entrega ao destinatário</h3>
-                    <p>
-                        JABOATAO DOS GUARARAPES - PE
-                    </p>
-                </div>
-            </div>
-            {/* <div className="container left">
-                <div className="content">
-                    <h2>2015</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-                        ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-                        detracto. Ea quis iuvaret expetendis his, te elit
-                        voluptua dignissim per, habeo iusto primis ea eam.
-                    </p>
-                </div>
-            </div>
-            <div className="container right">
-                <div className="content">
-                    <h2>2012</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-                        ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-                        detracto. Ea quis iuvaret expetendis his, te elit
-                        voluptua dignissim per, habeo iusto primis ea eam.
-                    </p>
-                </div>
-            </div>
-            <div className="container left">
-                <div className="content">
-                    <h2>2011</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-                        ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-                        detracto. Ea quis iuvaret expetendis his, te elit
-                        voluptua dignissim per, habeo iusto primis ea eam.
-                    </p>
-                </div>
-            </div>
-            <div className="container right">
-                <div className="content">
-                    <h2>2007</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, quo ei simul congue exerci,
-                        ad nec admodum perfecto mnesarchum, vim ea mazim fierent
-                        detracto. Ea quis iuvaret expetendis his, te elit
-                        voluptua dignissim per, habeo iusto primis ea eam.
-                    </p>
-                </div>
-            </div> */}
-        </div>
+        </>
     );
 };
