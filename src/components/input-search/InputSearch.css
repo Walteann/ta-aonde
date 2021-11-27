@@ -22,7 +22,8 @@ input {
     outline: none;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    padding-left: 2em;
+    padding-left: 1em;
+    content: 'ola';
 }
 
 @media (min-width: 480px) {

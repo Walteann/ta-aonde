@@ -18,6 +18,11 @@ header form {
     margin-top: 100px;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
 .numero {
     text-align: center;
     margin: 20px 0;
