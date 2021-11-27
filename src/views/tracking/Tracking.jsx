@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ReactLoading from 'react-loading';
 import { toast, ToastContainer } from 'react-toastify';
 
+import { Footer } from '../../components/footer/Footer';
 import { If } from '../../components/if/If';
 import { InputSearch } from '../../components/input-search/InputSearch';
 import { TimeLine } from '../../components/timeline/TimeLine';
@@ -84,6 +85,7 @@ export const Tracking = () => {
                 </section>
             </If>
             <ToastContainer />
+            <Footer />
         </>
     );
 };
