@@ -5,10 +5,12 @@
 
 ### Web
 
-![Ta aonde gif Web](https://gfycat.com/sphericalambitiousfox)
+https://gfycat.com/sphericalambitiousfox
+
 
 ### Mobile
-![Ta aonde gif mobile](https://gfycat.com/yawningshallowbetafish)
+https://gfycat.com/yawningshallowbetafish
+
 ## Técnologia
 
  - React
