@@ -5,11 +5,14 @@
 
 ### Web
 
-https://gfycat.com/sphericalambitiousfox
-
+<h1 align="center">
+ <img src="https://media.giphy.com/media/oefRRrJtR4X70br2Bm/giphy.gif" alt="gif demonstracao web" />
+</h1>
 
 ### Mobile
-https://gfycat.com/yawningshallowbetafish
+<h1 align="center">
+ <img src="https://media.giphy.com/media/HlMMeG7FvC0ibmUZe8/giphy.gif" alt="gif demonstracao mobile" />
+</h1>
 
 ## Técnologia
 
