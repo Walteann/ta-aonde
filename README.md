@@ -16,9 +16,9 @@
 
 ## Técnologia
 
- - React
- - NodeJs
- - Netlify
- - Css Folha de estilo
- - Responsivo
- - Tratamento de Error e Loading
+ - [x] React
+ - [x] NodeJs
+ - [x] Netlify
+ - [x] Css Folha de estilo
+ - [x] Responsivo
+ - [x] Tratamento de Error e Loading
