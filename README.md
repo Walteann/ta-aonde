@@ -22,3 +22,7 @@
  - [x] Css Folha de estilo
  - [x] Responsivo
  - [x] Tratamento de Error e Loading
+
+## Api
+
+Consumido [Api dos correios](https://documenter.getpostman.com/view/11074732/TzJpgyny) para consulta de rastreamento de encomenda.
